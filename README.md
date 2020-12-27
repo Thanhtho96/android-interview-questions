@@ -105,13 +105,17 @@
 
 * **Do you know what is the view tree? How can you optimize its depth?** - [Learn from here](https://developer.android.com/reference/android/view/ViewTreeObserver)
 
+* **How does the Touch Control and Events work in Android?** - [Learn from here](https://blog.mindorks.com/touch-control-and-events-in-android) and [here](https://www.youtube.com/watch?v=tKeYr7iV5xE)
+
 #### Displaying Lists of Content
 
 * **What is the difference between `ListView` and `RecyclerView`?** - [Learn from here](https://stackoverflow.com/questions/26728651/recyclerview-vs-listview)
 
-* **How does RecyclerView work internally?** - [Learn from here](https://blog.mindorks.com/how-does-recyclerview-work-internally)
+* **How does RecyclerView work internally?** - [Learn from here](https://blog.mindorks.com/how-does-recyclerview-work-internally) and [here](https://www.youtube.com/watch?v=60IYWdnHsZI)
 
 * **What is the ViewHolder pattern? Why should we use it?** - [Learn from here](https://stackoverflow.com/questions/21501316/what-is-the-benefit-of-viewholder-pattern-in-android)
+
+* **RecyclerView Optimization - Scrolling Performance Improvement** - [Learn from here](https://blog.mindorks.com/recyclerview-optimization)
 
 * **What is `SnapHelper`?** - [Learn from here](https://blog.mindorks.com/using-snaphelper-in-recyclerview-fc616b6833e8)
 
@@ -305,6 +309,8 @@
 * **Explain Work Manager in Android.** - [Learn from here](https://blog.mindorks.com/integrating-work-manager-in-android)
 
 * **Use-cases of WorkManager in Android.** - [Learn from here](https://www.youtube.com/watch?v=4LTpYXFMnJw)
+
+* **How ViewModel work internally?** - [Learn from here](https://blog.mindorks.com/android-viewmodels-under-the-hood)
 
 #### Others
 
@@ -512,12 +518,37 @@
     [abstraction](https://en.wikipedia.org/wiki/Abstraction_(software_engineering)), and
     [encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)).
 
-* **What is the difference between a constructor and a method?** 
+* **What is the difference between a constructor and a method?**
     - The name of the constructor is same as that of the class name, whereas the name of the method can be anything.
     - There is no return type of a constructor.
-    - When you make an object of a class, then the constructor of that class will be called automatically. But for methods, we need to call it explicitely.
+    - When you make an object of a class, then the constructor of that class will be called automatically. 
+      But for methods, we need to call it explicitely.
     - Constructors can't be inherited but you can call the constructor of the parent class by calling `super()`.
-
+    - Constructor and a method they both run a block of code but the difference is in calling them.
+    - We can call method directly using their name.
+    - Constructor Syntax -
+        ```java
+        public class SomeClassName{
+            SomeClassName(parameter_list){ 
+                ...
+            } 
+            ...
+        }
+        ```
+    - Note:
+        In the above syntax, the name of the constructor is the same as that of class
+        and it has no return type.
+        
+    - Method Syntax 
+        ```java
+        public class SomeClassName{
+            public void someMethodName(parameter_list){
+                ...
+            }
+            // call method
+            someMethodName(parameter_list)
+        }
+        ```
 * **Differences between abstract classes and interfaces?** 
     - An abstract class, is a class that contains both concrete and abstract methods 
     (methods without implementations). An abstract method must be implemented by the abstract class
